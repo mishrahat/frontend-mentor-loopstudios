@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Loopstudios landing page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              white: "hsl(0, 0%, 100%)",
+              black: "hsl(0, 0%, 0%)",
+              darkGray: "hsl(0, 0%, 55%)",
+              veryDarkGray: "hsl(0, 0%, 41%)",
+            },
+            fontFamily: {
+              alata: ["Alata", "sans-serif"],
+              josefin: ["Josefin Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+    </style>
+  </head>
+  <body class="overflow-x-hidden font-alata h-screen">
+    <div
+      class="w-full py-10 menubar hidden px-5 h-screen md:hidden lg:hidden absolute bg-black"
+    >
+      <div class="flex justify-between">
+        <img src="images/logo.svg" alt="" />
+        <a class="menu-close" href="">
+          <img src="images/icon-close.svg" alt="" />
+        </a>
+      </div>
+      <div class="mt-28 flex flex-col gap-5">
+        <a class="text-white uppercase font-josefin text-3xl" href="">About</a>
+        <a class="text-white uppercase font-josefin text-3xl" href=""
+          >Careers</a
+        >
+        <a class="text-white uppercase font-josefin text-3xl" href="">Events</a>
+        <a class="text-white uppercase font-josefin text-3xl" href=""
+          >Products</a
+        >
+        <a class="text-white uppercase font-josefin text-3xl" href=""
+          >Support</a
+        >
+      </div>
+    </div>
+    <header
+      class="lg:bg-[url('images/desktop/image-hero.jpg')] bg-[url('images/mobile/image-hero.jpg')] md:bg-[url('images/desktop/image-hero.jpg')] pb-72 bg-cover bg-no-repeat"
+    >
+      <div class="text-white mx-auto max-w-[1300px]">
+        <nav class="hidden md:flex lg:flex pt-[90px] justify-between">
+          <img src="images/logo.svg" alt="" />
+          <div class="flex gap-9">
+            <a href="">About</a>
+            <a href="">Careers</a>
+            <a href="">Events</a>
+            <a href="">Products</a>
+            <a href="">Support</a>
+          </div>
+        </nav>
+        <nav
+          class="lg:hidden px-5 pt-10 md:px-0 lg:px-0 flex justify-between mobile-menu"
+        >
+          <img src="images/logo.svg" alt="" />
+          <a class="mobile-menu-on" onclick="clicked" href="">
+            <img src="images/icon-hamburger.svg"" />
+          </a>
+        </nav>
+        <div class="flex items-center justify-center md:block lg:block">
+          <div
+            class="mt-44 border border-white md:w-[53%] lg:w-[53%] w-[80%] md:py-10 lg:py-10 lg:px-14 md:px-14 px-10 py-6"
+          >
+            <h1
+              class="md:text-left lg:text-left font-josefin leading-none md:text-[70px] lg:text-[70px] text-[30px]"
+            >
+              IMMERSIVE EXPERIENCES THAT DELIVER
+            </h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div
+      class="container relative mt-48 flex-col md:flex-row lg:flex-row flex mx-auto max-w-[1300px]"
+    >
+      <div>
+        <img
+          class="md:w-[900px] lg:w-[900px] px-10 md:px-0 lg:px-0 w-[400px] lg:w-[600px] md:h-[600px]"
+          src="images/desktop/image-interactive.jpg"
+          alt=""
+        />
+      </div>
+      <div
+        class="w-[700px] py-20 px-32 bg-white mb-5 hidden lg:block md:block absolute bottom-[-100px] right-[-100px] z-10"
+      >
+        <div class="flex flex-col gap-5">
+          <h2 class="font-josefin leading-none text-[50px]">
+            THE LEADER IN INTERACTIVE VR
+          </h2>
+          <p class="text-darkGray leading-7 text-[15px] text-left">
+            Founded in 2011, Loopstudios has been producing worldclass virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed business through
+            digital experiences that bind to their brand.
+          </p>
+        </div>
+      </div>
+      <div class="w-full pt-10 px-10 bg-white text-center lg:hidden md:hidden">
+        <div class="flex flex-col px-6 gap-5">
+          <h2 class="font-josefin leading-none text-[30px]">
+            THE LEADER IN INTERACTIVE VR
+          </h2>
+          <p class="text-darkGray leading-7 text-[15px]">
+            Founded in 2011, Loopstudios has been producing worldclass virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed business through
+            digital experiences that bind to their brand.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container relative mt-48 mx-auto max-w-[1300px]">
+      <div class="md:flex lg:flex items-center justify-between">
+        <h2
+          class="font-josefin text-center text-[30px] md:text-[50px] lg:text-[50px]"
+        >
+          OUR CREATIONS
+        </h2>
+        <a
+          class="border hidden md:block lg:block tracking-[5px] hover:bg-black hover:text-white transition font-bold border-black py-2 px-20"
+          href=""
+          >SEE ALL</a
+        >
+      </div>
+      <div
+        class="grid grid-cols-1 px-5 md:px-0 lg:px-0 md:grid-cols-4 lg:grid-cols-4 mt-14 gap-8"
+      >
+        <div
+          class="bg-[url('images/mobile/image-deep-earth.jpg')] lg:bg-[url('images/desktop/image-deep-earth.jpg')] md:bg-[url('images/desktop/image-deep-earth.jpg')] bg-cover bg-no-repeat w-[320px] lg:w-full md:w-full md:h-[550px] lg:h-[550px] h-[200px] pb-4 flex items-end justify-center"
+        >
+          <h3 class="font-josefin text-[40px] mr-10 leading-none text-white">
+            DEEP <br />
+            EARTH
+          </h3>
+        </div>
+        <div
+          class="lg:bg-[url('images/desktop/image-night-arcade.jpg')] md:bg-[url('images/desktop/image-night-arcade.jpg')] bg-[url('images/mobile/image-night-arcade.jpg')] bg-cover bg-no-repeat w-[320px] lg:w-full md:w-full md:h-[550px] lg:h-[550px] h-[200px] pb-4 flex items-end justify-center"
+        >
+          <h3 class="font-josefin text-[40px] mr-10 leading-none text-white">
+            NIGHT <br />
+            ARCADE
+          </h3>
+        </div>
+        <div
+          class="lg:bg-[url('images/desktop/image-soccer-team.jpg')] md:bg-[url('images/desktop/image-soccer-team.jpg')] bg-[url('images/mobile/image-soccer-team.jpg')] bg-cover bg-no-repeat w-[320px] lg:w-full md:w-full md:h-[550px] lg:h-[550px] h-[200px] pb-4 flex items-end justify-center"
+        >
+          <h3 class="font-josefin text-[40px] mr-10 leading-none text-white">
+            SOCCER <br />
+            TEAM VR
+          </h3>
+        </div>
+        <div
+          class="lg:bg-[url('images/desktop/image-grid.jpg')] md:bg-[url('images/desktop/image-grid.jpg')] bg-[url('images/mobile/image-grid.jpg')] bg-cover bg-no-repeat w-[320px] lg:w-full md:w-full md:h-[550px] lg:h-[550px] h-[200px] pb-4 flex items-end justify-center"
+        >
+          <h3 class="font-josefin text-[40px] mr-10 leading-none text-white">
+            THE <br />
+            GRID
+          </h3>
+        </div>
+        <div
+          class="lg:bg-[url('images/desktop/image-from-above.jpg')] md:bg-[url('images/desktop/image-from-above.jpg')] bg-[url('images/mobile/image-from-above.jpg')] bg-cover bg-no-repeat w-[320px] lg:w-full md:w-full md:h-[550px] lg:h-[550px] h-[200px] pb-4 flex items-end justify-center"
+        >
+          <h3 class="font-josefin text-[40px] mr-10 leading-none text-white">
+            FROM UP <br />
+            ABOVE VR
+          </h3>
+        </div>
+        <div
+          class="lg:bg-[url('images/desktop/image-pocket-borealis.jpg')] bg-[url('images/mobile/image-pocket-borealis.jpg')] md:bg-[url('images/desktop/image-pocket-borealis.jpg')] bg-cover bg-no-repeat w-[320px] lg:w-full md:w-full md:h-[550px] lg:h-[550px] h-[200px] pb-4 flex items-end justify-center"
+        >
+          <h3 class="font-josefin text-[40px] mr-10 leading-none text-white">
+            POCKET <br />
+            BOREALIS
+          </h3>
+        </div>
+        <div
+          class="lg:bg-[url('images/desktop/image-curiosity.jpg')] bg-[url('images/mobile/image-curiosity.jpg')] md:bg-[url('images/desktop/image-curiosity.jpg')] bg-cover bg-no-repeat w-[320px] lg:w-full md:w-full md:h-[550px] lg:h-[550px] h-[200px] pb-4 flex items-end justify-center"
+        >
+          <h3 class="font-josefin text-[40px] mr-10 leading-none text-white">
+            THE <br />
+            CURIOSITY
+          </h3>
+        </div>
+        <div
+          class="md:bg-[url('images/desktop/image-fisheye.jpg')] bg-[url('images/mobile/image-fisheye.jpg')] lg:bg-[url('images/desktop/image-fisheye.jpg')] bg-cover bg-no-repeat w-[320px] lg:w-full md:w-full md:h-[550px] lg:h-[550px] h-[200px] pb-4 flex items-end justify-center"
+        >
+          <h3 class="font-josefin text-[40px] mr-10 leading-none text-white">
+            MAKE IT <br />
+            FISHEYE
+          </h3>
+        </div>
+        <a
+          class="border md:hidden lg:hidden tracking-[5px] hover:bg-black hover:text-white transition font-bold border-black py-2 px-20"
+          href=""
+          >SEE ALL</a
+        >
+      </div>
+    </div>
+    <footer class="bg-black text-white">
+      <div
+        class="container relative py-10 mt-48 flex-col md:flex-row lg:flex-row flex justify-between items-center mx-auto max-w-[1300px]"
+      >
+        <div class="space-y-5">
+          <img src="images/logo.svg" alt="" />
+          <div
+            class="flex-col md:flex-row lg:flex-row items-center flex gap-10"
+          >
+            <a href="#">About</a>
+            <a href="#">Careers</a>
+            <a href="#">Events</a>
+            <a href="#">Products</a>
+            <a href="#">Support</a>
+          </div>
+        </div>
+        <div class="space-y-5">
+          <div
+            class="flex justify-center mt-8 md:mt-0 lg:mt-0 lg:justify-start md:justify-start gap-5"
+          >
+            <img src="images/icon-facebook.svg" alt="" />
+            <img src="images/icon-twitter.svg" alt="" />
+            <img src="images/icon-pinterest.svg" alt="" />
+            <img src="images/icon-instagram.svg" alt="" />
+          </div>
+          <p class="text-darkGray">
+            &copy; 2021 Loopstudios. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
